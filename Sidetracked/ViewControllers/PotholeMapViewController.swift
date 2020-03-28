@@ -10,8 +10,8 @@ import UIKit
 import MapKit
 
 class PotholeMapViewController: UIViewController {
-    let mapView = MKMapView()
-
+    @IBOutlet weak var mapView: MKMapView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         overrideUserInterfaceStyle = .light

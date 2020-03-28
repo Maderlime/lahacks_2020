@@ -16,8 +16,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6HI-8y-mdd">
-                                <rect key="frame" x="16" y="808" width="382" height="30"/>
-                                <state key="normal" title="Present next screen"/>
+                                <rect key="frame" x="16" y="790" width="382" height="48"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="HWF-vi-Nxn"/>
+                                </constraints>
+                                <state key="normal" title="Present next screen">
+                                    <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="frB-Iz-JmB" kind="show" id="hJB-ta-Iwt"/>
                                 </connections>
@@ -57,13 +68,24 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="go5-fi-rGU">
-                                <rect key="frame" x="16" y="816" width="382" height="30"/>
-                                <state key="normal" title="Enter Driving Mode"/>
+                                <rect key="frame" x="16" y="798" width="382" height="48"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="BQN-OT-onB"/>
+                                </constraints>
+                                <state key="normal" title="Enter Driving Mode">
+                                    <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="rwb-Ym-RM3" kind="show" id="doV-u8-rAS"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y0u-bO-40M">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y0u-bO-40M">
                                 <rect key="frame" x="20" y="64" width="40" height="40"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pce-wB-9tT">
@@ -78,6 +100,11 @@
                                     <constraint firstItem="Pce-wB-9tT" firstAttribute="centerX" secondItem="y0u-bO-40M" secondAttribute="centerX" id="Dx3-XG-PaM"/>
                                     <constraint firstItem="Pce-wB-9tT" firstAttribute="centerY" secondItem="y0u-bO-40M" secondAttribute="centerY" id="rZb-Jc-yx6"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -95,6 +122,9 @@
                         <viewLayoutGuide key="safeArea" id="XNk-LM-iaA"/>
                     </view>
                     <navigationItem key="navigationItem" id="NeM-3n-ypF"/>
+                    <connections>
+                        <outlet property="mapView" destination="6Ea-Cy-LUX" id="wZm-gU-OFl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7wO-M2-Gtz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -107,7 +137,25 @@
                     <view key="view" contentMode="scaleToFill" id="Oc6-es-uyg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="s2G-xe-V0i">
+                                <rect key="frame" x="44" y="88" width="326" height="326"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="s2G-xe-V0i" secondAttribute="height" multiplier="1:1" id="d7a-2w-b1t"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="14"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="s2G-xe-V0i" firstAttribute="top" secondItem="Rvy-8A-W26" secondAttribute="top" constant="44" id="HmW-1F-rVn"/>
+                            <constraint firstItem="Rvy-8A-W26" firstAttribute="trailing" secondItem="s2G-xe-V0i" secondAttribute="trailing" constant="44" id="bhH-aO-Oct"/>
+                            <constraint firstItem="s2G-xe-V0i" firstAttribute="leading" secondItem="Rvy-8A-W26" secondAttribute="leading" constant="44" id="sSF-lU-YWM"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Rvy-8A-W26"/>
                     </view>
                 </viewController>
@@ -123,24 +171,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aiv-h6-ey9" customClass="PreviewView" customModule="Sidetracked" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gGN-XW-LWl">
-                                <rect key="frame" x="16" y="816" width="382" height="30"/>
-                                <state key="normal" title="Exit driving mode"/>
+                                <rect key="frame" x="16" y="798" width="382" height="48"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="CeM-v6-dgL"/>
+                                </constraints>
+                                <state key="normal" title="Exit driving mode">
+                                    <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="exitButtonPressed:" destination="rwb-Ym-RM3" eventType="touchUpInside" id="HP5-0T-REo"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="Aiv-h6-ey9" firstAttribute="top" secondItem="L6X-kF-kvH" secondAttribute="top" id="0da-3r-J3A"/>
+                            <constraint firstItem="Aiv-h6-ey9" firstAttribute="leading" secondItem="NRI-Q1-UHR" secondAttribute="leading" id="2y9-3i-bnA"/>
                             <constraint firstItem="NRI-Q1-UHR" firstAttribute="trailing" secondItem="gGN-XW-LWl" secondAttribute="trailing" constant="16" id="EC9-4c-o8r"/>
+                            <constraint firstItem="NRI-Q1-UHR" firstAttribute="trailing" secondItem="Aiv-h6-ey9" secondAttribute="trailing" id="IAe-si-CQu"/>
+                            <constraint firstAttribute="bottom" secondItem="Aiv-h6-ey9" secondAttribute="bottom" id="Nlw-Zh-cd9"/>
                             <constraint firstItem="gGN-XW-LWl" firstAttribute="leading" secondItem="NRI-Q1-UHR" secondAttribute="leading" constant="16" id="fXe-Hd-j1a"/>
                             <constraint firstItem="NRI-Q1-UHR" firstAttribute="bottom" secondItem="gGN-XW-LWl" secondAttribute="bottom" constant="16" id="lzB-DM-9N1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="NRI-Q1-UHR"/>
                     </view>
                     <navigationItem key="navigationItem" id="zPs-wN-rIO"/>
+                    <connections>
+                        <outlet property="previewView" destination="Aiv-h6-ey9" id="kvt-DN-dmX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I7I-6t-nop" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1828" y="119"/>
+            <point key="canvasLocation" x="1827.5362318840582" y="118.52678571428571"/>
         </scene>
     </scenes>
     <resources>

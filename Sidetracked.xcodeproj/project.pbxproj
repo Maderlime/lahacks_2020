@@ -14,6 +14,8 @@
 		FB140E0C242F9F7000628B7A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB140E0B242F9F7000628B7A /* NetworkManager.swift */; };
 		FB140E0E242F9FC000628B7A /* NetworkRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB140E0D242F9FC000628B7A /* NetworkRequestable.swift */; };
 		FB140E10242F9FCA00628B7A /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB140E0F242F9FCA00628B7A /* Result.swift */; };
+		FB140E13242FABDD00628B7A /* CameraFeedManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB140E12242FABDD00628B7A /* CameraFeedManager.swift */; };
+		FB140E15242FACEB00628B7A /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB140E14242FACEB00628B7A /* PreviewView.swift */; };
 		FB630BC0242F8AAE00DBFA8B /* PotholeMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB630BBF242F8AAE00DBFA8B /* PotholeMapViewController.swift */; };
 		FBC9D233242F30D600D5CA58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC9D232242F30D600D5CA58 /* AppDelegate.swift */; };
 		FBC9D235242F30D600D5CA58 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC9D234242F30D600D5CA58 /* SceneDelegate.swift */; };
@@ -33,6 +35,8 @@
 		FB140E0B242F9F7000628B7A /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		FB140E0D242F9FC000628B7A /* NetworkRequestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestable.swift; sourceTree = "<group>"; };
 		FB140E0F242F9FCA00628B7A /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		FB140E12242FABDD00628B7A /* CameraFeedManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraFeedManager.swift; sourceTree = "<group>"; };
+		FB140E14242FACEB00628B7A /* PreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
 		FB630BBF242F8AAE00DBFA8B /* PotholeMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PotholeMapViewController.swift; sourceTree = "<group>"; };
 		FBC9D22F242F30D600D5CA58 /* Sidetracked.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sidetracked.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBC9D232242F30D600D5CA58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +95,15 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
+		FB140E11242FABCB00628B7A /* Camera Feed */ = {
+			isa = PBXGroup;
+			children = (
+				FB140E12242FABDD00628B7A /* CameraFeedManager.swift */,
+				FB140E14242FACEB00628B7A /* PreviewView.swift */,
+			);
+			path = "Camera Feed";
+			sourceTree = "<group>";
+		};
 		FB630BC1242F8ABA00DBFA8B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +136,7 @@
 		FBC9D231242F30D600D5CA58 /* Sidetracked */ = {
 			isa = PBXGroup;
 			children = (
+				FB140E11242FABCB00628B7A /* Camera Feed */,
 				FB140E0A242F9F5500628B7A /* Networking */,
 				FB630BC1242F8ABA00DBFA8B /* ViewControllers */,
 				FB140E07242F9DE400628B7A /* Model */,
@@ -236,7 +250,9 @@
 				FBC9D237242F30D600D5CA58 /* ViewController.swift in Sources */,
 				FB630BC0242F8AAE00DBFA8B /* PotholeMapViewController.swift in Sources */,
 				FBC9D233242F30D600D5CA58 /* AppDelegate.swift in Sources */,
+				FB140E13242FABDD00628B7A /* CameraFeedManager.swift in Sources */,
 				FB140E06242F9B3300628B7A /* DetailViewController.swift in Sources */,
+				FB140E15242FACEB00628B7A /* PreviewView.swift in Sources */,
 				FB140E0E242F9FC000628B7A /* NetworkRequestable.swift in Sources */,
 				FBC9D235242F30D600D5CA58 /* SceneDelegate.swift in Sources */,
 				FB140E10242F9FCA00628B7A /* Result.swift in Sources */,
