@@ -1,20 +1,20 @@
 PODS:
-  - Yoga (1.14.0)
-  - YogaKit (1.18.1):
-    - Yoga (~> 1.14)
+  - TensorFlowLiteC (2.1.0)
+  - TensorFlowLiteSwift (2.1.0):
+    - TensorFlowLiteC (= 2.1.0)
 
 DEPENDENCIES:
-  - YogaKit (~> 1.7)
+  - TensorFlowLiteSwift
 
 SPEC REPOS:
   trunk:
-    - Yoga
-    - YogaKit
+    - TensorFlowLiteC
+    - TensorFlowLiteSwift
 
 SPEC CHECKSUMS:
-  Yoga: cff67a400f6b74dc38eb0bad4f156673d9aa980c
-  YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
+  TensorFlowLiteC: 215603d4426d93810eace5947e317389554a4b66
+  TensorFlowLiteSwift: 9d8137f18d5ac30ca89bba4fbe118e0949ac5743
 
-PODFILE CHECKSUM: 8accd9d9960a232af2703b3ea3b5d37871b1233e
+PODFILE CHECKSUM: 1110ed4d8ee416eb20044d2f4fe2aa41110d1b58
 
 COCOAPODS: 1.9.1

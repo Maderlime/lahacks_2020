@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		2F676718FB2A69FC3EB1B4FF /* Pods_Sidetracked.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 621A434E40439883800C5237 /* Pods_Sidetracked.framework */; };
+		FB140E04242F9B1000628B7A /* DrivingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB140E03242F9B1000628B7A /* DrivingViewController.swift */; };
+		FB140E06242F9B3300628B7A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB140E05242F9B3300628B7A /* DetailViewController.swift */; };
+		FB140E09242F9DF600628B7A /* Pothole.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB140E08242F9DF600628B7A /* Pothole.swift */; };
+		FB140E0C242F9F7000628B7A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB140E0B242F9F7000628B7A /* NetworkManager.swift */; };
+		FB140E0E242F9FC000628B7A /* NetworkRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB140E0D242F9FC000628B7A /* NetworkRequestable.swift */; };
+		FB140E10242F9FCA00628B7A /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB140E0F242F9FCA00628B7A /* Result.swift */; };
+		FB630BC0242F8AAE00DBFA8B /* PotholeMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB630BBF242F8AAE00DBFA8B /* PotholeMapViewController.swift */; };
 		FBC9D233242F30D600D5CA58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC9D232242F30D600D5CA58 /* AppDelegate.swift */; };
 		FBC9D235242F30D600D5CA58 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC9D234242F30D600D5CA58 /* SceneDelegate.swift */; };
 		FBC9D237242F30D600D5CA58 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC9D236242F30D600D5CA58 /* ViewController.swift */; };
@@ -20,6 +27,13 @@
 		36B170C45ABB1F98B712E97D /* Pods-Sidetracked.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sidetracked.release.xcconfig"; path = "Target Support Files/Pods-Sidetracked/Pods-Sidetracked.release.xcconfig"; sourceTree = "<group>"; };
 		621A434E40439883800C5237 /* Pods_Sidetracked.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sidetracked.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C55E71E1F025B27E5572FF64 /* Pods-Sidetracked.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sidetracked.debug.xcconfig"; path = "Target Support Files/Pods-Sidetracked/Pods-Sidetracked.debug.xcconfig"; sourceTree = "<group>"; };
+		FB140E03242F9B1000628B7A /* DrivingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrivingViewController.swift; sourceTree = "<group>"; };
+		FB140E05242F9B3300628B7A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		FB140E08242F9DF600628B7A /* Pothole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pothole.swift; sourceTree = "<group>"; };
+		FB140E0B242F9F7000628B7A /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		FB140E0D242F9FC000628B7A /* NetworkRequestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestable.swift; sourceTree = "<group>"; };
+		FB140E0F242F9FCA00628B7A /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		FB630BBF242F8AAE00DBFA8B /* PotholeMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PotholeMapViewController.swift; sourceTree = "<group>"; };
 		FBC9D22F242F30D600D5CA58 /* Sidetracked.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sidetracked.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBC9D232242F30D600D5CA58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FBC9D234242F30D600D5CA58 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,7 +62,6 @@
 				C55E71E1F025B27E5572FF64 /* Pods-Sidetracked.debug.xcconfig */,
 				36B170C45ABB1F98B712E97D /* Pods-Sidetracked.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -58,6 +71,35 @@
 				621A434E40439883800C5237 /* Pods_Sidetracked.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FB140E07242F9DE400628B7A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FB140E08242F9DF600628B7A /* Pothole.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FB140E0A242F9F5500628B7A /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				FB140E0B242F9F7000628B7A /* NetworkManager.swift */,
+				FB140E0D242F9FC000628B7A /* NetworkRequestable.swift */,
+				FB140E0F242F9FCA00628B7A /* Result.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		FB630BC1242F8ABA00DBFA8B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FBC9D236242F30D600D5CA58 /* ViewController.swift */,
+				FB630BBF242F8AAE00DBFA8B /* PotholeMapViewController.swift */,
+				FB140E03242F9B1000628B7A /* DrivingViewController.swift */,
+				FB140E05242F9B3300628B7A /* DetailViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		FBC9D226242F30D600D5CA58 = {
@@ -81,9 +123,11 @@
 		FBC9D231242F30D600D5CA58 /* Sidetracked */ = {
 			isa = PBXGroup;
 			children = (
+				FB140E0A242F9F5500628B7A /* Networking */,
+				FB630BC1242F8ABA00DBFA8B /* ViewControllers */,
+				FB140E07242F9DE400628B7A /* Model */,
 				FBC9D232242F30D600D5CA58 /* AppDelegate.swift */,
 				FBC9D234242F30D600D5CA58 /* SceneDelegate.swift */,
-				FBC9D236242F30D600D5CA58 /* ViewController.swift */,
 				FBC9D238242F30D600D5CA58 /* Main.storyboard */,
 				FBC9D23B242F30D700D5CA58 /* Assets.xcassets */,
 				FBC9D23D242F30D700D5CA58 /* LaunchScreen.storyboard */,
@@ -103,7 +147,6 @@
 				FBC9D22B242F30D600D5CA58 /* Sources */,
 				FBC9D22C242F30D600D5CA58 /* Frameworks */,
 				FBC9D22D242F30D600D5CA58 /* Resources */,
-				893E924FF642ACA30B5689FF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -183,23 +226,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		893E924FF642ACA30B5689FF /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Sidetracked/Pods-Sidetracked-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Sidetracked/Pods-Sidetracked-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Sidetracked/Pods-Sidetracked-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -208,8 +234,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBC9D237242F30D600D5CA58 /* ViewController.swift in Sources */,
+				FB630BC0242F8AAE00DBFA8B /* PotholeMapViewController.swift in Sources */,
 				FBC9D233242F30D600D5CA58 /* AppDelegate.swift in Sources */,
+				FB140E06242F9B3300628B7A /* DetailViewController.swift in Sources */,
+				FB140E0E242F9FC000628B7A /* NetworkRequestable.swift in Sources */,
 				FBC9D235242F30D600D5CA58 /* SceneDelegate.swift in Sources */,
+				FB140E10242F9FCA00628B7A /* Result.swift in Sources */,
+				FB140E0C242F9F7000628B7A /* NetworkManager.swift in Sources */,
+				FB140E04242F9B1000628B7A /* DrivingViewController.swift in Sources */,
+				FB140E09242F9DF600628B7A /* Pothole.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

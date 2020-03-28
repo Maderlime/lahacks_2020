@@ -6,6 +6,6 @@ target 'Sidetracked' do
   use_frameworks!
 
   # Pods for PotholeTracker
-  pod 'YogaKit', '~> 1.7'
+  pod 'TensorFlowLiteSwift'
 
 end
