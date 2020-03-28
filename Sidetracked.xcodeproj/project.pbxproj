@@ -104,6 +104,13 @@
 			path = "Camera Feed";
 			sourceTree = "<group>";
 		};
+		FB140E16242FC37300628B7A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		FB630BC1242F8ABA00DBFA8B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +143,7 @@
 		FBC9D231242F30D600D5CA58 /* Sidetracked */ = {
 			isa = PBXGroup;
 			children = (
+				FB140E16242FC37300628B7A /* Views */,
 				FB140E11242FABCB00628B7A /* Camera Feed */,
 				FB140E0A242F9F5500628B7A /* Networking */,
 				FB630BC1242F8ABA00DBFA8B /* ViewControllers */,
