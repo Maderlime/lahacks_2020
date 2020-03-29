@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>We use your location to log the position of potholes you discover along with providing you information of potholes near you</string>
 	<key>NSCameraUsageDescription</key>
 	<string>We use your camera to scan the road for possible potholes.</string>
 	<key>UIUserInterfaceStyle</key>

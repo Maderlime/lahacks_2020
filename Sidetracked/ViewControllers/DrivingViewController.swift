@@ -9,12 +9,20 @@
 import UIKit
 
 class DrivingViewController: UIViewController {
+    @IBOutlet weak var overlayView: OverlayView!
     @IBOutlet weak var previewView: PreviewView!
+    
+    // Holds the results at any time
+    private var interResult: InterResult?
+    private var previousInferenceTimeMs: TimeInterval = Date.distantPast.timeIntervalSince1970 * 1000
     
     // Controllers that manage functionality
     private lazy var cameraFeedManager = CameraFeedManager(previewView: previewView)
+    private var modelDataHandler: ModelDataHandler? = ModelDataHandler(modelFileInfo: MobileNetSSD.modelInfo, labelsFileInfo: MobileNetSSD.labelsInfo)
     
 
+    
+    // MARK: View Handling
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         cameraFeedManager.checkCameraConfigurationAndStartSession()
@@ -25,13 +33,15 @@ class DrivingViewController: UIViewController {
         cameraFeedManager.stopSession()
     }
     
-    // MARK; View Handling
     override func viewDidLoad() {
         super.viewDidLoad()
 
         cameraFeedManager.delegate = self
         // Do any additional setup after loading the view.
     }
+    
+    
+    
     
     @IBAction func exitButtonPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)

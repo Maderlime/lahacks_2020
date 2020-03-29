@@ -16,6 +16,17 @@
 		FB140E10242F9FCA00628B7A /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB140E0F242F9FCA00628B7A /* Result.swift */; };
 		FB140E13242FABDD00628B7A /* CameraFeedManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB140E12242FABDD00628B7A /* CameraFeedManager.swift */; };
 		FB140E15242FACEB00628B7A /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB140E14242FACEB00628B7A /* PreviewView.swift */; };
+		FB140E18242FCA7400628B7A /* OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB140E17242FCA7400628B7A /* OverlayView.swift */; };
+		FB140E1B242FCD7600628B7A /* ModelDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB140E1A242FCD7600628B7A /* ModelDataHandler.swift */; };
+		FB140E1E242FCDFF00628B7A /* CVPixelBufferExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB140E1D242FCDFF00628B7A /* CVPixelBufferExtension.swift */; };
+		FB140E20242FCE4600628B7A /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB140E1F242FCE4600628B7A /* UIColorExtension.swift */; };
+		FB140E23242FD57100628B7A /* labelmap.txt in Resources */ = {isa = PBXBuildFile; fileRef = FB140E21242FD57000628B7A /* labelmap.txt */; };
+		FB140E24242FD57100628B7A /* detect.tflite in Resources */ = {isa = PBXBuildFile; fileRef = FB140E22242FD57100628B7A /* detect.tflite */; };
+		FB140E26242FD5D100628B7A /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB140E25242FD5D100628B7A /* StringExtension.swift */; };
+		FB140E2A242FF45100628B7A /* DrivingWithAccelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB140E29242FF45100628B7A /* DrivingWithAccelViewController.swift */; };
+		FB140E2C242FF67F00628B7A /* PendingOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB140E2B242FF67F00628B7A /* PendingOperations.swift */; };
+		FB140E2E242FF84000628B7A /* AccelerationDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB140E2D242FF84000628B7A /* AccelerationDataFetcher.swift */; };
+		FB140E302430172500628B7A /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB140E2F2430172500628B7A /* LocationManager.swift */; };
 		FB630BC0242F8AAE00DBFA8B /* PotholeMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB630BBF242F8AAE00DBFA8B /* PotholeMapViewController.swift */; };
 		FBC9D233242F30D600D5CA58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC9D232242F30D600D5CA58 /* AppDelegate.swift */; };
 		FBC9D235242F30D600D5CA58 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC9D234242F30D600D5CA58 /* SceneDelegate.swift */; };
@@ -37,6 +48,17 @@
 		FB140E0F242F9FCA00628B7A /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		FB140E12242FABDD00628B7A /* CameraFeedManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraFeedManager.swift; sourceTree = "<group>"; };
 		FB140E14242FACEB00628B7A /* PreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
+		FB140E17242FCA7400628B7A /* OverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OverlayView.swift; path = Sidetracked/Model/OverlayView.swift; sourceTree = SOURCE_ROOT; };
+		FB140E1A242FCD7600628B7A /* ModelDataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDataHandler.swift; sourceTree = "<group>"; };
+		FB140E1D242FCDFF00628B7A /* CVPixelBufferExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVPixelBufferExtension.swift; sourceTree = "<group>"; };
+		FB140E1F242FCE4600628B7A /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		FB140E21242FD57000628B7A /* labelmap.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = labelmap.txt; sourceTree = "<group>"; };
+		FB140E22242FD57100628B7A /* detect.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = detect.tflite; sourceTree = "<group>"; };
+		FB140E25242FD5D100628B7A /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		FB140E29242FF45100628B7A /* DrivingWithAccelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrivingWithAccelViewController.swift; sourceTree = "<group>"; };
+		FB140E2B242FF67F00628B7A /* PendingOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendingOperations.swift; sourceTree = "<group>"; };
+		FB140E2D242FF84000628B7A /* AccelerationDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccelerationDataFetcher.swift; sourceTree = "<group>"; };
+		FB140E2F2430172500628B7A /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		FB630BBF242F8AAE00DBFA8B /* PotholeMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PotholeMapViewController.swift; sourceTree = "<group>"; };
 		FBC9D22F242F30D600D5CA58 /* Sidetracked.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sidetracked.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBC9D232242F30D600D5CA58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +102,8 @@
 		FB140E07242F9DE400628B7A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FB140E22242FD57100628B7A /* detect.tflite */,
+				FB140E21242FD57000628B7A /* labelmap.txt */,
 				FB140E08242F9DF600628B7A /* Pothole.swift */,
 			);
 			path = Model;
@@ -107,8 +131,30 @@
 		FB140E16242FC37300628B7A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FB140E17242FCA7400628B7A /* OverlayView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		FB140E19242FCD6100628B7A /* ML */ = {
+			isa = PBXGroup;
+			children = (
+				FB140E1A242FCD7600628B7A /* ModelDataHandler.swift */,
+			);
+			path = ML;
+			sourceTree = "<group>";
+		};
+		FB140E1C242FCDE000628B7A /* Extensions + util */ = {
+			isa = PBXGroup;
+			children = (
+				FB140E1D242FCDFF00628B7A /* CVPixelBufferExtension.swift */,
+				FB140E1F242FCE4600628B7A /* UIColorExtension.swift */,
+				FB140E25242FD5D100628B7A /* StringExtension.swift */,
+				FB140E2B242FF67F00628B7A /* PendingOperations.swift */,
+				FB140E2D242FF84000628B7A /* AccelerationDataFetcher.swift */,
+				FB140E2F2430172500628B7A /* LocationManager.swift */,
+			);
+			path = "Extensions + util";
 			sourceTree = "<group>";
 		};
 		FB630BC1242F8ABA00DBFA8B /* ViewControllers */ = {
@@ -118,6 +164,7 @@
 				FB630BBF242F8AAE00DBFA8B /* PotholeMapViewController.swift */,
 				FB140E03242F9B1000628B7A /* DrivingViewController.swift */,
 				FB140E05242F9B3300628B7A /* DetailViewController.swift */,
+				FB140E29242FF45100628B7A /* DrivingWithAccelViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -143,6 +190,8 @@
 		FBC9D231242F30D600D5CA58 /* Sidetracked */ = {
 			isa = PBXGroup;
 			children = (
+				FB140E1C242FCDE000628B7A /* Extensions + util */,
+				FB140E19242FCD6100628B7A /* ML */,
 				FB140E16242FC37300628B7A /* Views */,
 				FB140E11242FABCB00628B7A /* Camera Feed */,
 				FB140E0A242F9F5500628B7A /* Networking */,
@@ -217,9 +266,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB140E23242FD57100628B7A /* labelmap.txt in Resources */,
 				FBC9D23F242F30D700D5CA58 /* LaunchScreen.storyboard in Resources */,
 				FBC9D23C242F30D700D5CA58 /* Assets.xcassets in Resources */,
 				FBC9D23A242F30D600D5CA58 /* Main.storyboard in Resources */,
+				FB140E24242FD57100628B7A /* detect.tflite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,15 +307,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBC9D237242F30D600D5CA58 /* ViewController.swift in Sources */,
+				FB140E2A242FF45100628B7A /* DrivingWithAccelViewController.swift in Sources */,
+				FB140E2C242FF67F00628B7A /* PendingOperations.swift in Sources */,
 				FB630BC0242F8AAE00DBFA8B /* PotholeMapViewController.swift in Sources */,
 				FBC9D233242F30D600D5CA58 /* AppDelegate.swift in Sources */,
 				FB140E13242FABDD00628B7A /* CameraFeedManager.swift in Sources */,
 				FB140E06242F9B3300628B7A /* DetailViewController.swift in Sources */,
+				FB140E1E242FCDFF00628B7A /* CVPixelBufferExtension.swift in Sources */,
 				FB140E15242FACEB00628B7A /* PreviewView.swift in Sources */,
 				FB140E0E242F9FC000628B7A /* NetworkRequestable.swift in Sources */,
+				FB140E26242FD5D100628B7A /* StringExtension.swift in Sources */,
 				FBC9D235242F30D600D5CA58 /* SceneDelegate.swift in Sources */,
 				FB140E10242F9FCA00628B7A /* Result.swift in Sources */,
+				FB140E18242FCA7400628B7A /* OverlayView.swift in Sources */,
+				FB140E20242FCE4600628B7A /* UIColorExtension.swift in Sources */,
+				FB140E1B242FCD7600628B7A /* ModelDataHandler.swift in Sources */,
 				FB140E0C242F9F7000628B7A /* NetworkManager.swift in Sources */,
+				FB140E302430172500628B7A /* LocationManager.swift in Sources */,
+				FB140E2E242FF84000628B7A /* AccelerationDataFetcher.swift in Sources */,
 				FB140E04242F9B1000628B7A /* DrivingViewController.swift in Sources */,
 				FB140E09242F9DF600628B7A /* Pothole.swift in Sources */,
 			);
