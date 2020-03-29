@@ -76,4 +76,14 @@ app.post('/add-pothole', async (req, res, next) => {
   }
 });
 
+app.get('/:id', (req, res, next) => {
+  pool.query('SELECT * FROM pothole_details where id=$1', [req.params.id], (qerr, qres) => {
+    if (qerr) {
+      res.status(500).send(qerr);
+    } else {
+      res.send(qres.rows[0]);
+    }
+  });
+})
+
 app.listen(80);
