@@ -23,7 +23,7 @@ class DrivingWithAccelViewController: UIViewController {
     let numberFormatter = NumberFormatter()
     let accelQueue = PendingOperations().accelerationDataFetchInProgress
     var sumOfData: Double = 0
-    let accelerationThreshold: Double = 1.5
+    let accelerationThreshold: Double = 1
     
     var averageTotal: Double = 0 {
         didSet {

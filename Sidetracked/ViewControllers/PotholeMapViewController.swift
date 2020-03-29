@@ -13,6 +13,15 @@ import MobileCoreServices
 class PotholeMapViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
     
+    // TEMP DATA
+    let tempData: [Pothole] = [
+        Pothole(latitude: 34.247675, longitude: -118.821160, image: nil, rating: nil),
+        Pothole(latitude: 34.248367, longitude: -118.820308, image: nil, rating: nil),
+        Pothole(latitude: 34.246584, longitude: -118.822014, image: nil, rating: nil),
+        Pothole(latitude: 34.244837, longitude: -118.822036, image: nil, rating: nil),
+        Pothole(latitude: 34.251311, longitude: -118.822025, image: nil, rating: nil)
+    ]
+    
     var clLocation: CLLocation? = nil {
         didSet {
             if let clLocation = clLocation {
