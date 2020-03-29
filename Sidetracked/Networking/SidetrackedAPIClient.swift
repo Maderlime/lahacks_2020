@@ -29,7 +29,6 @@ class SidetrackedAPIClient: APIClient {
         // TO BE IMPLEMENTED
         fetch(with: request, completion: completion) { data -> [Pothole] in
             let potholeData = try decoder.decode([Pothole].self, from: data)
-            
             print(potholeData)
             return potholeData
         }
