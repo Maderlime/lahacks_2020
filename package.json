@@ -1,0 +1,26 @@
+{
+  "name": "lahacks_2020",
+  "version": "1.0.0",
+  "description": "Pothole Detector",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Maderlime/lahacks_2020.git"
+  },
+  "keywords": [
+    "Oracle",
+    "Database"
+  ],
+  "author": "Paul Pan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Maderlime/lahacks_2020/issues"
+  },
+  "homepage": "https://github.com/Maderlime/lahacks_2020#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0"
+  }
+}
