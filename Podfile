@@ -7,5 +7,8 @@ target 'Sidetracked' do
 
   # Pods for PotholeTracker
   pod 'TensorFlowLiteSwift'
+  #pod 'Mapbox-iOS-SDK', '~> 5.7'
+  pod 'GoogleMaps'
+  pod 'GooglePlaces'
 
 end

@@ -21,7 +21,6 @@ class DrivingWithAccelViewController: UIViewController {
     let motion = CMMotionManager()
     let timeInterval: TimeInterval = 0.1
     let numberFormatter = NumberFormatter()
-    let accelQueue = PendingOperations().accelerationDataFetchInProgress
     var sumOfData: Double = 0
     let accelerationThreshold: Double = 1
     

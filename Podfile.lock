@@ -1,20 +1,33 @@
 PODS:
+  - GoogleMaps (3.8.0):
+    - GoogleMaps/Maps (= 3.8.0)
+  - GoogleMaps/Base (3.8.0)
+  - GoogleMaps/Maps (3.8.0):
+    - GoogleMaps/Base
+  - GooglePlaces (3.8.0):
+    - GoogleMaps/Base (= 3.8.0)
   - TensorFlowLiteC (2.1.0)
   - TensorFlowLiteSwift (2.1.0):
     - TensorFlowLiteC (= 2.1.0)
 
 DEPENDENCIES:
+  - GoogleMaps
+  - GooglePlaces
   - TensorFlowLiteSwift
 
 SPEC REPOS:
   trunk:
+    - GoogleMaps
+    - GooglePlaces
     - TensorFlowLiteC
     - TensorFlowLiteSwift
 
 SPEC CHECKSUMS:
+  GoogleMaps: 7c8d66d70e4e8c300f43a7219d8fdaad7b325a9a
+  GooglePlaces: d5f70c3e9e427964fdeca1301a665d276ccd8754
   TensorFlowLiteC: 215603d4426d93810eace5947e317389554a4b66
   TensorFlowLiteSwift: 9d8137f18d5ac30ca89bba4fbe118e0949ac5743
 
-PODFILE CHECKSUM: 1110ed4d8ee416eb20044d2f4fe2aa41110d1b58
+PODFILE CHECKSUM: ceb6f4c4d050f33a557e35554195e231be50934b
 
 COCOAPODS: 1.9.1

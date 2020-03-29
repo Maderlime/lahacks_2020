@@ -7,13 +7,13 @@
 //
 
 import UIKit
+import GoogleMaps
 import MapKit
 import MobileCoreServices
 
 class PotholeMapViewController: UIViewController {
-    @IBOutlet weak var mapView: MKMapView!
     
-    // TEMP DATA
+    // TEMP DATA FOR TESTING PINS
     let tempData: [Pothole] = [
         Pothole(latitude: 34.247675, longitude: -118.821160, image: nil, rating: nil),
         Pothole(latitude: 34.248367, longitude: -118.820308, image: nil, rating: nil),
@@ -22,6 +22,13 @@ class PotholeMapViewController: UIViewController {
         Pothole(latitude: 34.251311, longitude: -118.822025, image: nil, rating: nil)
     ]
     
+    // Location manager manages everything location
+    lazy var locationManager: LocationManager = {
+        return LocationManager(locationDelegate: self, permissionsDelegate: nil)
+    }()
+    
+    
+    // MARK: Instance variables
     var clLocation: CLLocation? = nil {
         didSet {
             if let clLocation = clLocation {
@@ -31,43 +38,46 @@ class PotholeMapViewController: UIViewController {
         }
     }
     
-    var placemark: CLPlacemark? = nil
+    var placemark: CLPlacemark? = nil {
+        didSet {
+            if let placemark = placemark {
+                clLocation = placemark.location
+            }
+        }
+    }
     
-    // MARK: Helper Classes
-    lazy var locationManager: LocationManager = {
-        return LocationManager(locationDelegate: self, permissionsDelegate: nil)
-    }()
+    var mapView: GMSMapView? = nil
     
+    
+    // MARK: View did load
     override func viewDidLoad() {
         super.viewDidLoad()
-        overrideUserInterfaceStyle = .light
         
-        // Setup
-        setupMap()
-        getCurrentLocation()
-        
-        // Do any additional setup after loading the view.
-    }
-    
-    // MARK: Location + Map Functions
-    
-    func setupMap() {
-        mapView.showsUserLocation = true
-    }
-    
-    func getCurrentLocation() {
+        // Request the current location
         locationManager.requestLocation()
     }
     
+
+    // Function that requests the current location
+    
+    func dropPinsFor(potholes: [Pothole]) {
+        for pothole in potholes {
+            let marker = GMSMarker()
+            marker.position = CLLocationCoordinate2D(latitude: pothole.latitude, longitude: pothole.longitude)
+            marker.title = "Pothole"
+            marker.snippet = "It do be here"
+            marker.map = mapView
+        }
+    }
+    
     func goToLocation(_ location: CLLocation) {
-        // create cemter and region
-        let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
-        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
         
-        // set map region and overlays
-        mapView.setRegion(region, animated: true)
-        
-        // TODO Remove reload the pins either if its passed a certain time or a zone is left
+        // NEW GOOGLE MAPS
+        let camera = GMSCameraPosition.camera(withLatitude: location.coordinate.latitude, longitude: location.coordinate.longitude, zoom: 15)
+        let mapView = GMSMapView.map(withFrame: self.view.frame, camera: camera)
+        self.mapView = mapView
+        self.view.addSubview(mapView)
+        self.view.sendSubviewToBack(mapView)
     }
     
     
@@ -86,6 +96,11 @@ class PotholeMapViewController: UIViewController {
 // MARK: Extensions
 
 extension PotholeMapViewController: LocationManagerDelegate {
+    func obtainedPlacemark(_ placemark: CLPlacemark, location: CLLocation) {
+        self.placemark = placemark
+        dropPinsFor(potholes: tempData)
+    }
+    
     func failedWithError(_ error: LocationError) {
         func failedWithError(_ error: LocationError) {
             switch error {
@@ -99,11 +114,6 @@ extension PotholeMapViewController: LocationManagerDelegate {
                 createAlert(withTitle: "Unknown Error", andDescription: "There was an unknown error...")
             }
         }
-    }
-    
-    func obtainedPlacemark(_ placemark: CLPlacemark, location: CLLocation) {
-        clLocation = location
-        self.placemark = placemark
     }
 }
 

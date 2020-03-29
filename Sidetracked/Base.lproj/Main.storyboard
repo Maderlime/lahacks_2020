@@ -100,9 +100,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="6Ea-Cy-LUX">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                            </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="go5-fi-rGU">
                                 <rect key="frame" x="16" y="798" width="382" height="48"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -143,20 +140,13 @@
                         <constraints>
                             <constraint firstItem="go5-fi-rGU" firstAttribute="leading" secondItem="XNk-LM-iaA" secondAttribute="leading" constant="16" id="3AX-rR-PiY"/>
                             <constraint firstItem="Pce-wB-9tT" firstAttribute="leading" secondItem="XNk-LM-iaA" secondAttribute="leading" constant="20" id="7i7-88-XMk"/>
-                            <constraint firstItem="6Ea-Cy-LUX" firstAttribute="top" secondItem="Gl5-KF-IGo" secondAttribute="top" id="8jN-b6-S7m"/>
                             <constraint firstItem="Pce-wB-9tT" firstAttribute="top" secondItem="XNk-LM-iaA" secondAttribute="top" constant="20" id="9GK-fL-bG5"/>
-                            <constraint firstItem="6Ea-Cy-LUX" firstAttribute="leading" secondItem="XNk-LM-iaA" secondAttribute="leading" id="IhB-Si-mAk"/>
                             <constraint firstItem="XNk-LM-iaA" firstAttribute="bottom" secondItem="go5-fi-rGU" secondAttribute="bottom" constant="16" id="Iu6-Er-ESb"/>
-                            <constraint firstAttribute="bottom" secondItem="6Ea-Cy-LUX" secondAttribute="bottom" id="OaW-Uf-QZB"/>
-                            <constraint firstItem="XNk-LM-iaA" firstAttribute="trailing" secondItem="6Ea-Cy-LUX" secondAttribute="trailing" id="PMw-Iv-4wg"/>
                             <constraint firstItem="XNk-LM-iaA" firstAttribute="trailing" secondItem="go5-fi-rGU" secondAttribute="trailing" constant="16" id="w1Z-qw-ncP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="XNk-LM-iaA"/>
                     </view>
                     <navigationItem key="navigationItem" id="NeM-3n-ypF"/>
-                    <connections>
-                        <outlet property="mapView" destination="6Ea-Cy-LUX" id="wZm-gU-OFl"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7wO-M2-Gtz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
