@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 class DrivingViewController: UIViewController {
     @IBOutlet weak var overlayView: OverlayView!
@@ -19,7 +20,11 @@ class DrivingViewController: UIViewController {
     // Controllers that manage functionality
     private lazy var cameraFeedManager = CameraFeedManager(previewView: previewView)
     private var modelDataHandler: ModelDataHandler? = ModelDataHandler(modelFileInfo: MobileNetSSD.modelInfo, labelsFileInfo: MobileNetSSD.labelsInfo)
-    
+    let sidetrackedAPIClient = SidetrackedAPIClient()
+    // Location manager manages everything location
+     lazy var locationManager: LocationManager = {
+         return LocationManager(locationDelegate: self, permissionsDelegate: nil)
+     }()
     // CONSTANTS
     private let displayFont = UIFont.systemFont(ofSize: 14.0, weight: .medium)
     private let edgeOffset: CGFloat = 2.0
@@ -58,6 +63,12 @@ class DrivingViewController: UIViewController {
     
     @IBAction func exitButtonPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func reportPotholeButtonPressed(_ sender: Any) {
+        
+        // GET LOCATION
+        locationManager.requestLocation()
     }
 }
 
@@ -207,4 +218,24 @@ extension DrivingViewController: CameraFeedManagerDelegate {
       self.overlayView.setNeedsDisplay()
     }
     
+}
+
+
+extension DrivingViewController: LocationManagerDelegate {
+    func obtainedPlacemark(_ placemark: CLPlacemark, location: CLLocation) {
+        if let location = placemark.location {
+            sidetrackedAPIClient.reportPotholeAt(lattitude: location.coordinate.latitude, longitude: location.coordinate.longitude) { result in
+                switch result {
+                case .success:
+                    print("Added sucessfully!")
+                case .failure(let error):
+                    print(error)
+                }
+            }
+        }
+    }
+    
+    func failedWithError(_ error: LocationError) {
+        print(error)
+    }
 }

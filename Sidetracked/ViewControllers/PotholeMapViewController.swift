@@ -30,6 +30,20 @@ class PotholeMapViewController: UIViewController {
         }
     }
     
+    var selectedPothole: Pothole? = nil {
+        didSet {
+            if let selectedPothole = selectedPothole {
+                
+                DispatchQueue.main.async {
+                    // Create the detail view controller and present modaly
+                    let detailViewController = self.storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+                    detailViewController.pothole = selectedPothole
+                    self.present(detailViewController, animated: true, completion: nil)
+                }
+            }
+        }
+    }
+    
     let sidetrackedAPIClient = SidetrackedAPIClient()
     let pendingOperations = PendingOperations()
     
@@ -89,17 +103,16 @@ class PotholeMapViewController: UIViewController {
     }
     
     func dropPinsFor(potholes: [Pothole]) {
-        
         DispatchQueue.main.async {
             for pothole in potholes {
                 let marker = GMSMarker()
-    //            marker.appearAnimation = .pop
+                marker.appearAnimation = .pop
                 marker.position = CLLocationCoordinate2D(latitude: pothole.latitude, longitude: pothole.longitude)
                 marker.title = "Pothole"
+                marker.snippet = String(pothole.id);
                 marker.map = self.mapView
             }
         }
-        
     }
     
     func goToLocation(_ location: CLLocation) {
@@ -112,7 +125,18 @@ class PotholeMapViewController: UIViewController {
         self.view.sendSubviewToBack(mapView)
     }
     
-    
+    // get the details
+    func getDetailsFor(id: Int) {
+        sidetrackedAPIClient.getPotholeDetails(withId: id) { result in
+            switch result {
+            case .success(let data):
+                self.selectedPothole = data
+                
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
     
     // MARK: Helper Classes
     
@@ -155,9 +179,14 @@ extension PotholeMapViewController: GMSMapViewDelegate {
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
         print("Marker was tapped! \(marker.title)")
         
-        // Create the detail view controller and present modaly
-        let detailViewController = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
-        present(detailViewController, animated: true, completion: nil)
+        // get the information for that specific pothole
+        print("THE ID IS \(Int(marker.snippet!)!)")
+        getDetailsFor(id: Int(marker.snippet!)!)
+
+        
+//        // Create the detail view controller and present modaly
+//        let detailViewController = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+//        present(detailViewController, animated: true, completion: nil)
         
         return true
     }

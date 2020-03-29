@@ -327,7 +327,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="exitButtonPressed:" destination="rwb-Ym-RM3" eventType="touchUpInside" id="9l1-AU-vDP"/>
+                                    <action selector="reportPotholeButtonPressed:" destination="rwb-Ym-RM3" eventType="touchUpInside" id="qiE-ox-Ac0"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gGN-XW-LWl">
