@@ -178,6 +178,8 @@ class ModelDataHandler: NSObject {
 
     // Returns the inference time and inferences
     let result = InterResult(inferenceTime: interval, inferences: resultArray)
+    
+    print(result)
     return result
   }
 

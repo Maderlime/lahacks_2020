@@ -46,13 +46,19 @@ class PotholeMapViewController: UIViewController {
         }
     }
     
-    var mapView: GMSMapView? = nil
+    var mapView: GMSMapView? = nil {
+        didSet {
+            if let mapView = mapView {
+                mapView.delegate = self
+            }
+        }
+    }
     
     
     // MARK: View did load
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+            
         // Request the current location
         locationManager.requestLocation()
     }
@@ -114,6 +120,20 @@ extension PotholeMapViewController: LocationManagerDelegate {
                 createAlert(withTitle: "Unknown Error", andDescription: "There was an unknown error...")
             }
         }
+    }
+}
+
+extension PotholeMapViewController: GMSMapViewDelegate {
+    
+    // Called when a marker is tapped
+    func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
+        print("Marker was tapped! \(marker.title)")
+        
+        // Create the detail view controller and present modaly
+        let detailViewController = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+        present(detailViewController, animated: true, completion: nil)
+        
+        return true
     }
 }
 
