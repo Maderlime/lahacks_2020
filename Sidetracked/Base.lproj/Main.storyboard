@@ -115,7 +115,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="w2o-r2-WsG" kind="show" id="wwU-fi-qUv"/>
+                                    <segue destination="rwb-Ym-RM3" kind="show" id="iWD-FS-0Ut"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pce-wB-9tT">
@@ -200,7 +200,6 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oqI-Ri-vvB" customClass="OverlayView" customModule="Sidetracked" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gGN-XW-LWl">
                                 <rect key="frame" x="16" y="798" width="382" height="48"/>
@@ -248,11 +247,11 @@
             <objects>
                 <viewController id="w2o-r2-WsG" customClass="DrivingWithAccelViewController" customModule="Sidetracked" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LwH-ZB-FDo">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="JgO-od-MMP">
-                                <rect key="frame" x="149" y="350.5" width="116" height="141.5"/>
+                                <rect key="frame" x="149" y="377.5" width="116" height="141.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="vu3-fp-6jR">
                                         <rect key="frame" x="0.0" y="0.0" width="42" height="141.5"/>

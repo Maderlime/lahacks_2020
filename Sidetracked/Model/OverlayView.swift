@@ -31,7 +31,9 @@ class OverlayView: UIView {
         
         // Drawing code
         for objectOverlay in objectOverlays {
-            
+            drawBorders(of: objectOverlay)
+            drawBackground(of: objectOverlay)
+            drawName(of: objectOverlay)
         }
     }
     
