@@ -1,6 +1,7 @@
 const dotenv = require('dotenv');
 const express = require('express');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 const { Pool, Client } = require('pg');
 
 dotenv.config();
@@ -11,6 +12,7 @@ const pool = new Pool({
 });
 
 app.use(bodyParser.json());
+app.use(cors());
 
 app.get('/all-potholes', (req, res, next) => {
   pool.query('SELECT * FROM pothole', (qerr, qres) => {
@@ -76,14 +78,11 @@ app.post('/add-pothole', async (req, res, next) => {
   }
 });
 
-app.get('/:id', (req, res, next) => {
-  pool.query('SELECT * FROM pothole_details where id=$1', [req.params.id], (qerr, qres) => {
-    if (qerr) {
-      res.status(500).send(qerr);
-    } else {
-      res.send(qres.rows[0]);
-    }
-  });
+app.get('/:id', async (req, res, next) => {
+  const resq1 = await pool.query('SELECT * FROM pothole WHERE id=$1', [req.params.id]);
+  const resq2 = await pool.query('SELECT * FROM pothole_details WHERE id=$1', [req.params.id]);
+  const response = {...resq1.rows[0], ...resq2.rows[0]};
+  res.send(response);
 })
 
 app.listen(80);
