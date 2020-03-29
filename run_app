@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+FLASK_APP=app.py sudo /home/opc/lahacks_2020/venv/bin/flask run --host=0.0.0.0 --port=80
