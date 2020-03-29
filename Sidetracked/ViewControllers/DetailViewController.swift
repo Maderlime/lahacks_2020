@@ -21,23 +21,44 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var descriptionText: UITextView!
     @IBOutlet weak var returnButton: UIButton!
     
-    var pothole: Pothole? = nil {
+    var isCreatingEntry = false
+    var pothole: Pothole = Pothole()
+    {
         didSet {
-            if let pothole = pothole {
-                titleLabel.text = "\(pothole.latitude) + \(pothole.longitude)"
-                
-                if let rating = pothole.rating {
-                    setRating(rating)
-
-                }
-            }
+//            setupView()
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.setupView()
+        
         // Do any additional setup after loading the view.
+    }
+    
+    func setupView() {
+        titleLabel.text = "\(pothole.latitude), \(pothole.longitude)"
+        
+        // link the downloaded image
+        imageView.image = #imageLiteral(resourceName: "Tire")
+        
+        // If the page is just being used to view...
+        if !isCreatingEntry {
+            rating1.isEnabled = false
+            rating2.isEnabled = false
+            rating3.isEnabled = false
+            rating4.isEnabled = false
+            rating5.isEnabled = false
+        }
+        
+        if let rating = pothole.rating {
+            setRating(rating)
+        }
+        
+        if let description = pothole.description {
+            descriptionText.text = description
+        }
+        
     }
     
     @IBAction func rating1Pressed(_ sender: Any) {

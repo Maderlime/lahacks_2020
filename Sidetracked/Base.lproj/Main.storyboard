@@ -308,30 +308,28 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oqI-Ri-vvB" customClass="OverlayView" customModule="Sidetracked" customModuleProvider="target">
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oqI-Ri-vvB" customClass="OverlayView" customModule="Sidetracked" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NlT-zg-o3U">
-                                        <rect key="frame" x="24" y="718" width="382" height="48"/>
-                                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="48" id="lrZ-QD-Tfe"/>
-                                        </constraints>
-                                        <state key="normal" title="Report Pothole">
-                                            <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="exitButtonPressed:" destination="rwb-Ym-RM3" eventType="touchUpInside" id="9l1-AU-vDP"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NlT-zg-o3U">
+                                <rect key="frame" x="16" y="734" width="382" height="48"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="lrZ-QD-Tfe"/>
+                                </constraints>
+                                <state key="normal" title="Report Pothole">
+                                    <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="exitButtonPressed:" destination="rwb-Ym-RM3" eventType="touchUpInside" id="9l1-AU-vDP"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gGN-XW-LWl">
                                 <rect key="frame" x="16" y="798" width="382" height="48"/>
                                 <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -355,8 +353,11 @@
                         <constraints>
                             <constraint firstItem="Aiv-h6-ey9" firstAttribute="top" secondItem="L6X-kF-kvH" secondAttribute="top" id="0da-3r-J3A"/>
                             <constraint firstItem="Aiv-h6-ey9" firstAttribute="leading" secondItem="NRI-Q1-UHR" secondAttribute="leading" id="2y9-3i-bnA"/>
+                            <constraint firstItem="gGN-XW-LWl" firstAttribute="top" secondItem="NlT-zg-o3U" secondAttribute="bottom" constant="16" id="3lI-kQ-m0g"/>
+                            <constraint firstItem="NlT-zg-o3U" firstAttribute="leading" secondItem="NRI-Q1-UHR" secondAttribute="leading" constant="16" id="4TY-W1-5jL"/>
                             <constraint firstItem="NRI-Q1-UHR" firstAttribute="trailing" secondItem="gGN-XW-LWl" secondAttribute="trailing" constant="16" id="EC9-4c-o8r"/>
                             <constraint firstItem="NRI-Q1-UHR" firstAttribute="trailing" secondItem="Aiv-h6-ey9" secondAttribute="trailing" id="IAe-si-CQu"/>
+                            <constraint firstItem="NRI-Q1-UHR" firstAttribute="trailing" secondItem="NlT-zg-o3U" secondAttribute="trailing" constant="16" id="LqO-i0-r3o"/>
                             <constraint firstAttribute="bottom" secondItem="Aiv-h6-ey9" secondAttribute="bottom" id="Nlw-Zh-cd9"/>
                             <constraint firstItem="gGN-XW-LWl" firstAttribute="leading" secondItem="NRI-Q1-UHR" secondAttribute="leading" constant="16" id="fXe-Hd-j1a"/>
                             <constraint firstItem="NRI-Q1-UHR" firstAttribute="bottom" secondItem="gGN-XW-LWl" secondAttribute="bottom" constant="16" id="lzB-DM-9N1"/>

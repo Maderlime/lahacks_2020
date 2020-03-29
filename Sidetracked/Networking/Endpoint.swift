@@ -47,10 +47,31 @@ extension SidetrackedEndpoints: Endpoint {
     var path: String {
         switch self {
         case .getPotholesNear: return "/all-potholes"
-        case .getPotholeDetails: return "/"
+        case .getPotholeDetails(let id): return "/\(id)"
         case .reportPotholeAt: return "/add-pothole"
         }
     }
+    
+//    var request: URLRequest {
+//        switch self {
+//        case .getPotholeDetails(let id):
+//            let url = urlComponents.url!
+//            var request = URLRequest(url: url)
+//
+//            let json: [String: Any] = ["id": id]
+//            let jsonData = try? JSONSerialization.data(withJSONObject: json)
+////            request.httpMethod = "GET"
+//            request.httpBody = jsonData
+//
+//            return request
+//
+//        default:
+//            let url = urlComponents.url!
+//            return URLRequest(url: url)
+//        }
+//    }
+    
+    
     
 //    var queryItems: [URLQueryItem] {
 //        switch self {

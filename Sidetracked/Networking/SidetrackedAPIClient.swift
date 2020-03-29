@@ -43,7 +43,8 @@ class SidetrackedAPIClient: APIClient {
         
         fetch(with: request, completion: completion) { data -> Pothole in
             let potholeData = try decoder.decode(Pothole.self, from: data)
-            print(potholeData)
+            
+            print(potholeData.id)
             return potholeData
         }
     }
