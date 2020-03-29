@@ -14,13 +14,24 @@ import MobileCoreServices
 class PotholeMapViewController: UIViewController {
     
     // TEMP DATA FOR TESTING PINS
-    let tempData: [Pothole] = [
-        Pothole(latitude: 34.247675, longitude: -118.821160, image: nil, rating: nil),
-        Pothole(latitude: 34.248367, longitude: -118.820308, image: nil, rating: nil),
-        Pothole(latitude: 34.246584, longitude: -118.822014, image: nil, rating: nil),
-        Pothole(latitude: 34.244837, longitude: -118.822036, image: nil, rating: nil),
-        Pothole(latitude: 34.251311, longitude: -118.822025, image: nil, rating: nil)
-    ]
+//    let tempData: [Pothole] = [
+//        Pothole(latitude: 34.247675, longitude: -118.821160, image: nil, rating: nil),
+//        Pothole(latitude: 34.248367, longitude: -118.820308, image: nil, rating: nil),
+//        Pothole(latitude: 34.246584, longitude: -118.822014, image: nil, rating: nil),
+//        Pothole(latitude: 34.244837, longitude: -118.822036, image: nil, rating: nil),
+//        Pothole(latitude: 34.251311, longitude: -118.822025, image: nil, rating: nil)
+//    ]
+    
+    var potholes: [Pothole]? = nil {
+        didSet {
+            if let potholes = potholes {
+                dropPinsFor(potholes: potholes)
+            }
+        }
+    }
+    
+    let sidetrackedAPIClient = SidetrackedAPIClient()
+    let pendingOperations = PendingOperations()
     
     // Location manager manages everything location
     lazy var locationManager: LocationManager = {
@@ -64,7 +75,18 @@ class PotholeMapViewController: UIViewController {
     }
     
 
-    // Function that requests the current location
+    // Load in the pin data
+    
+    func loadPinData() {
+        sidetrackedAPIClient.getPotholesNear(lattitude: 0, longitude: 0) { result in
+            switch result {
+            case .success(let data):
+                self.potholes = data
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
     
     func dropPinsFor(potholes: [Pothole]) {
         for pothole in potholes {
@@ -104,7 +126,7 @@ class PotholeMapViewController: UIViewController {
 extension PotholeMapViewController: LocationManagerDelegate {
     func obtainedPlacemark(_ placemark: CLPlacemark, location: CLLocation) {
         self.placemark = placemark
-        dropPinsFor(potholes: tempData)
+        loadPinData()
     }
     
     func failedWithError(_ error: LocationError) {

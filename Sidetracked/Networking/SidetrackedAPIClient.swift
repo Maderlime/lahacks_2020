@@ -27,16 +27,25 @@ class SidetrackedAPIClient: APIClient {
         let request = endpoint.request
         
         // TO BE IMPLEMENTED
-//        fetch(with: request, completion: completion) { data -> [Pothole] in
-//
-//        }
+        fetch(with: request, completion: completion) { data -> [Pothole] in
+            let potholeData = try decoder.decode([Pothole].self, from: data)
+            
+            print(potholeData)
+            return potholeData
+        }
     }
     
-    func getPotholeDetails(withId id: UUID, completion: @escaping (Result<Pothole, APIError>) -> Void) {
+    func getPotholeDetails(withId id: Int, completion: @escaping (Result<Pothole, APIError>) -> Void) {
         let endpoint = SidetrackedEndpoints.getPotholeDetails(id: id)
         let decoder = JSONDecoder.dataDecoder
         
         let request = endpoint.request
+        
+        fetch(with: request, completion: completion) { data -> Pothole in
+            let potholeData = try decoder.decode(Pothole.self, from: data)
+            print(potholeData)
+            return potholeData
+        }
     }
     
     func reportPotholeAt(lattitude: Double, longitude: Double, completion: @escaping (Result<Bool, APIError>) -> Void) {

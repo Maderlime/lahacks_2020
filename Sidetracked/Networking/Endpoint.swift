@@ -11,7 +11,7 @@ import Foundation
 protocol Endpoint {
     var base: String { get }
     var path: String { get }
-    var queryItems: [URLQueryItem] { get }
+//    var queryItems: [URLQueryItem] { get }
 }
 
 extension Endpoint {
@@ -19,7 +19,7 @@ extension Endpoint {
     var urlComponents: URLComponents {
         var components = URLComponents(string: base)!
         components.path = path
-        components.queryItems = queryItems
+//        components.queryItems = queryItems
         
         return components
     }
@@ -35,31 +35,31 @@ enum SidetrackedEndpoints {
     
     // creates endpoints useful for calling the API
     case getPotholesNear(lattitude: Double, longitude: Double)
-    case getPotholeDetails(id: UUID)
+    case getPotholeDetails(id: Int)
     case reportPotholeAt(lattitude: Double, longitude: Double)
 }
 
 extension SidetrackedEndpoints: Endpoint {
     var base: String {
-        return ""
+        return "http://150.136.108.105"
     }
     
     var path: String {
         switch self {
-        case .getPotholesNear: return ""
-        case .getPotholeDetails: return ""
-        case .reportPotholeAt: return ""
+        case .getPotholesNear: return "/all-potholes"
+        case .getPotholeDetails: return "/"
+        case .reportPotholeAt: return "/add-pothole"
         }
     }
     
-    var queryItems: [URLQueryItem] {
-        switch self {
-        case .getPotholesNear(let lattitude, let longitude):
-            return []
-        case .getPotholeDetails(let id):
-            return []
-        case .reportPotholeAt(let lattitude, let longitude):
-            return []
-        }
-    }
+//    var queryItems: [URLQueryItem] {
+//        switch self {
+//        case .getPotholesNear(let lattitude, let longitude):
+//            return []
+//        case .getPotholeDetails(let id):
+//            return []
+//        case .reportPotholeAt(let lattitude, let longitude):
+//            return []
+//        }
+//    }
 }

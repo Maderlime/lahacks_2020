@@ -185,48 +185,63 @@
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="MHf-dt-6d4" secondAttribute="height" multiplier="13:11" id="bhh-gK-M1q"/>
                                         </constraints>
-                                        <state key="normal" title="Button" image="1"/>
+                                        <state key="normal" title="Button" image="0"/>
+                                        <connections>
+                                            <action selector="rating1Pressed:" destination="buS-Zr-D6h" eventType="touchUpInside" id="ExM-nB-b6H"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dtu-55-6Rn">
                                         <rect key="frame" x="68.5" y="0.0" width="51.5" height="43.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Dtu-55-6Rn" secondAttribute="height" multiplier="13:11" id="o4L-K1-QRf"/>
                                         </constraints>
-                                        <state key="normal" title="Button" image="1"/>
+                                        <state key="normal" title="Button" image="0"/>
+                                        <connections>
+                                            <action selector="rating2Pressed:" destination="buS-Zr-D6h" eventType="touchUpInside" id="acX-r3-gDa"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P2N-55-Zi1">
                                         <rect key="frame" x="137" y="0.0" width="52" height="43.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="P2N-55-Zi1" secondAttribute="height" multiplier="13:11" id="1Wl-Hp-ibW"/>
                                         </constraints>
-                                        <state key="normal" title="Button" image="1"/>
+                                        <state key="normal" title="Button" image="0"/>
+                                        <connections>
+                                            <action selector="rating3Pressed:" destination="buS-Zr-D6h" eventType="touchUpInside" id="FML-7L-s4J"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="imr-3j-wLw">
                                         <rect key="frame" x="206" y="0.0" width="51.5" height="43.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="imr-3j-wLw" secondAttribute="height" multiplier="13:11" id="4ml-CX-pM3"/>
                                         </constraints>
-                                        <state key="normal" title="Button" image="1"/>
+                                        <state key="normal" title="Button" image="0"/>
+                                        <connections>
+                                            <action selector="rating4Pressed:" destination="buS-Zr-D6h" eventType="touchUpInside" id="3uK-Zw-8A6"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TFL-e8-MGp">
                                         <rect key="frame" x="274.5" y="0.0" width="51.5" height="43.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="TFL-e8-MGp" secondAttribute="height" multiplier="13:11" id="K46-wT-U1b"/>
                                         </constraints>
-                                        <state key="normal" title="Button" image="1"/>
+                                        <state key="normal" title="Button" image="0"/>
+                                        <connections>
+                                            <action selector="rating5Pressed:" destination="buS-Zr-D6h" eventType="touchUpInside" id="zVm-Yl-GHb"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fae-Ds-jDd">
-                                <rect key="frame" x="44" y="511" width="326" height="279"/>
+                                <rect key="frame" x="44" y="511" width="326" height="271"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mOy-Gi-m5C">
-                                <rect key="frame" x="44" y="806" width="326" height="48"/>
+                                <rect key="frame" x="44" y="798" width="326" height="48"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="8vM-mz-R80"/>
@@ -247,7 +262,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="dIx-Io-IQ6" firstAttribute="top" secondItem="Rvy-8A-W26" secondAttribute="top" constant="16" id="5FW-tw-XXb"/>
-                            <constraint firstItem="Rvy-8A-W26" firstAttribute="bottom" secondItem="mOy-Gi-m5C" secondAttribute="bottom" constant="8" id="KYW-zK-jXx"/>
+                            <constraint firstItem="Rvy-8A-W26" firstAttribute="bottom" secondItem="mOy-Gi-m5C" secondAttribute="bottom" constant="16" id="KYW-zK-jXx"/>
                             <constraint firstItem="fae-Ds-jDd" firstAttribute="leading" secondItem="s2G-xe-V0i" secondAttribute="leading" id="MEB-Xn-gqe"/>
                             <constraint firstItem="qMq-xh-uMG" firstAttribute="trailing" secondItem="s2G-xe-V0i" secondAttribute="trailing" id="PdX-v2-Xlh"/>
                             <constraint firstItem="dIx-Io-IQ6" firstAttribute="trailing" secondItem="s2G-xe-V0i" secondAttribute="trailing" id="WfS-hj-QSa"/>
@@ -296,6 +311,26 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oqI-Ri-vvB" customClass="OverlayView" customModule="Sidetracked" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NlT-zg-o3U">
+                                        <rect key="frame" x="24" y="718" width="382" height="48"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="lrZ-QD-Tfe"/>
+                                        </constraints>
+                                        <state key="normal" title="Report Pothole">
+                                            <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="exitButtonPressed:" destination="rwb-Ym-RM3" eventType="touchUpInside" id="9l1-AU-vDP"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gGN-XW-LWl">
                                 <rect key="frame" x="16" y="798" width="382" height="48"/>
@@ -421,7 +456,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="1" width="83.5" height="55.5"/>
+        <image name="0" width="83.5" height="55.5"/>
         <image name="Tire" width="169" height="169"/>
         <image name="menu" width="18" height="12"/>
         <image name="typeLogo" width="569" height="194"/>

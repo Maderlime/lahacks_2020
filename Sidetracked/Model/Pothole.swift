@@ -9,9 +9,39 @@
 import Foundation
 import UIKit
 
-struct Pothole {
+enum ImageState {
+    case placeholder
+    case downloaded
+    case failed
+}
+
+class Pothole: Decodable {
     let latitude: Double
     let longitude: Double
-    let image: UIImage?
+    let id: Int
+    let imageSrc: URL?
     let rating: Double?
+    let description: String?
+    
+    var image: UIImage? = nil
+    var imageState = ImageState.placeholder
+    
+    init()  {
+        self.id = 0
+        self.imageSrc = URL(string: "")!
+        self.latitude = 0
+        self.longitude = 0
+        self.rating = 0
+        self.description = ""
+    }
+    
+    enum CodingKeys: String, CodingKey {
+        case id
+        case longitude
+        case latitude
+        case imageSrc = "picture"
+        case rating
+        case description
+        
+    }
 }
