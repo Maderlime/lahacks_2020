@@ -63,9 +63,9 @@ class PotholeMapViewController: UIViewController {
     func dropPinsFor(potholes: [Pothole]) {
         for pothole in potholes {
             let marker = GMSMarker()
+            marker.appearAnimation = .pop
             marker.position = CLLocationCoordinate2D(latitude: pothole.latitude, longitude: pothole.longitude)
             marker.title = "Pothole"
-            marker.snippet = "It do be here"
             marker.map = mapView
         }
     }
