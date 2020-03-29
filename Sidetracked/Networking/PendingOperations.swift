@@ -9,17 +9,7 @@
 import Foundation
 
 class PendingOperations {
-    lazy var downloadsInProgress: [IndexPath: Operation] = [:]
-    lazy var downloadQueue: OperationQueue = {
-        var queue = OperationQueue()
-        queue.name = "Download Queue"
-        return queue
-    } ()
+    var downloadsInProgress = [IndexPath: Operation]()
     
-    lazy var accelerationDataFetchInProgress: [IndexPath: Operation] = [:]
-    lazy var filtrationQueue: OperationQueue = {
-        var queue = OperationQueue()
-        queue.name = "Acceleration Data Queue"
-        return queue
-    } ()
+    let downloadQueue = OperationQueue()
 }

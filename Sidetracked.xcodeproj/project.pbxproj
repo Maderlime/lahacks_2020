@@ -21,7 +21,6 @@
 		FB140E24242FD57100628B7A /* detect.tflite in Resources */ = {isa = PBXBuildFile; fileRef = FB140E22242FD57100628B7A /* detect.tflite */; };
 		FB140E26242FD5D100628B7A /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB140E25242FD5D100628B7A /* StringExtension.swift */; };
 		FB140E2A242FF45100628B7A /* DrivingWithAccelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB140E29242FF45100628B7A /* DrivingWithAccelViewController.swift */; };
-		FB140E2C242FF67F00628B7A /* PendingOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB140E2B242FF67F00628B7A /* PendingOperations.swift */; };
 		FB140E2E242FF84000628B7A /* AccelerationDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB140E2D242FF84000628B7A /* AccelerationDataFetcher.swift */; };
 		FB140E302430172500628B7A /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB140E2F2430172500628B7A /* LocationManager.swift */; };
 		FB140E322430377000628B7A /* Networker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB140E312430377000628B7A /* Networker.swift */; };
@@ -30,6 +29,8 @@
 		FB140E3824303A4000628B7A /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB140E3724303A4000628B7A /* Endpoint.swift */; };
 		FB140E3A24303D9A00628B7A /* JSONDecoderExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB140E3924303D9A00628B7A /* JSONDecoderExtension.swift */; };
 		FB140E3C24303DB500628B7A /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB140E3B24303DB500628B7A /* UIViewControllerExtension.swift */; };
+		FB140E3E2430429100628B7A /* PendingOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB140E3D2430429100628B7A /* PendingOperations.swift */; };
+		FB140E40243042CE00628B7A /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB140E3F243042CE00628B7A /* ImageDownloader.swift */; };
 		FB630BC0242F8AAE00DBFA8B /* PotholeMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB630BBF242F8AAE00DBFA8B /* PotholeMapViewController.swift */; };
 		FBC9D233242F30D600D5CA58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC9D232242F30D600D5CA58 /* AppDelegate.swift */; };
 		FBC9D235242F30D600D5CA58 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC9D234242F30D600D5CA58 /* SceneDelegate.swift */; };
@@ -56,7 +57,6 @@
 		FB140E22242FD57100628B7A /* detect.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = detect.tflite; sourceTree = "<group>"; };
 		FB140E25242FD5D100628B7A /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		FB140E29242FF45100628B7A /* DrivingWithAccelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrivingWithAccelViewController.swift; sourceTree = "<group>"; };
-		FB140E2B242FF67F00628B7A /* PendingOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendingOperations.swift; sourceTree = "<group>"; };
 		FB140E2D242FF84000628B7A /* AccelerationDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccelerationDataFetcher.swift; sourceTree = "<group>"; };
 		FB140E2F2430172500628B7A /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		FB140E312430377000628B7A /* Networker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networker.swift; sourceTree = "<group>"; };
@@ -65,6 +65,8 @@
 		FB140E3724303A4000628B7A /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		FB140E3924303D9A00628B7A /* JSONDecoderExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDecoderExtension.swift; sourceTree = "<group>"; };
 		FB140E3B24303DB500628B7A /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		FB140E3D2430429100628B7A /* PendingOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendingOperations.swift; sourceTree = "<group>"; };
+		FB140E3F243042CE00628B7A /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		FB630BBF242F8AAE00DBFA8B /* PotholeMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PotholeMapViewController.swift; sourceTree = "<group>"; };
 		FBC9D22F242F30D600D5CA58 /* Sidetracked.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sidetracked.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBC9D232242F30D600D5CA58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -119,10 +121,11 @@
 			isa = PBXGroup;
 			children = (
 				FB140E312430377000628B7A /* Networker.swift */,
-				FB140E2B242FF67F00628B7A /* PendingOperations.swift */,
 				FB140E3724303A4000628B7A /* Endpoint.swift */,
 				FB140E33243037B800628B7A /* APIClient.swift */,
 				FB140E352430397500628B7A /* SidetrackedAPIClient.swift */,
+				FB140E3D2430429100628B7A /* PendingOperations.swift */,
+				FB140E3F243042CE00628B7A /* ImageDownloader.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -317,8 +320,8 @@
 			files = (
 				FBC9D237242F30D600D5CA58 /* ViewController.swift in Sources */,
 				FB140E2A242FF45100628B7A /* DrivingWithAccelViewController.swift in Sources */,
-				FB140E2C242FF67F00628B7A /* PendingOperations.swift in Sources */,
 				FB140E34243037B800628B7A /* APIClient.swift in Sources */,
+				FB140E3E2430429100628B7A /* PendingOperations.swift in Sources */,
 				FB630BC0242F8AAE00DBFA8B /* PotholeMapViewController.swift in Sources */,
 				FBC9D233242F30D600D5CA58 /* AppDelegate.swift in Sources */,
 				FB140E13242FABDD00628B7A /* CameraFeedManager.swift in Sources */,
@@ -326,6 +329,7 @@
 				FB140E06242F9B3300628B7A /* DetailViewController.swift in Sources */,
 				FB140E1E242FCDFF00628B7A /* CVPixelBufferExtension.swift in Sources */,
 				FB140E15242FACEB00628B7A /* PreviewView.swift in Sources */,
+				FB140E40243042CE00628B7A /* ImageDownloader.swift in Sources */,
 				FB140E26242FD5D100628B7A /* StringExtension.swift in Sources */,
 				FBC9D235242F30D600D5CA58 /* SceneDelegate.swift in Sources */,
 				FB140E18242FCA7400628B7A /* OverlayView.swift in Sources */,
